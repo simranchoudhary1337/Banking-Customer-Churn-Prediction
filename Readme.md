@@ -105,7 +105,7 @@ It significantly improved recall for the minority class.
 -Actual vs. Predicted Plot → The model is stronger at predicting Class 0 (non-churners).    
     It still struggles with Class 1 (actual churners), which is common when there's class imbalance even after SMOTE.<br>
 
-<br>
+
 ![Residuals Plot](images/residual.png)
 <br>
 -Residuals Plot → Most values are 0, meaning the model predicts correctly most of the time.   
