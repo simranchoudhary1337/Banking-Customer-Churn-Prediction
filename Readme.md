@@ -1,6 +1,4 @@
-## Ml-Project
-
-# mlproject | Predict student performance
+# mlproject | Bank-Customer Churn Prediction
 
 _This project focuses on predicting customer churn using machine learning techniques on an imbalanced dataset. The goal was not just to maximize accuracy, but to improve detection of minority class (churned customers), which is critical for business decision-making_
    
@@ -37,27 +35,27 @@ The goal of this project is to predict the likelihood of a customer churning, en
 
 ---
 <h2><a class="anchor" id="data-cleaning-preparation"></a>Data cleaning & Preparation</h2>
--Visualized distributions, class imbalance, and feature relationships.
+-Visualized distributions, class imbalance, and feature relationships.    
 -Checked for the null values, duplicate values.
 
 
 ---
 <h2><a class="anchor" id="exploratory-data-analysis-eda"></a>Exploratory Data Analysis (EDA)</h2>
--Get to know which factors influence performance.
+-Get to know which factors influence performance.   
 -Build a correlation-heatmap:<br>
-  -Older customers tend to churn more Age 0.29.
-  -Inactive members are more likely to churn -0.16.
+  -Older customers tend to churn more Age 0.29.   
+  -Inactive members are more likely to churn -0.16.   
 
-features to be focussed:
-Age
-IsActiveMember
-Balance
+features to be focussed:      
+Age   
+IsActiveMember    
+Balance   
 
-Other features like:
-CreditScore
-NumOfProducts
-Tenure
-Geography & Gender (after encoding)
+Other features like:    
+CreditScore   
+NumOfProducts   
+Tenure    
+Geography & Gender (after encoding)   
 
 
 ---
@@ -65,12 +63,12 @@ Geography & Gender (after encoding)
 Model Selection & Training
 
 ->Data Preparation<br>
-   -Prepared the data by separating the features (X) from the target variable (y), which is the Exited. 
-   -Convert binary columns to 0/1 if not already like Gender.
-   -The categorical features are then processed using OneHotEncoder.  
-   -The data is then split into training and testing sets, with 80% for training and 20% for testing.
+   -Prepared the data by separating the features (X) from the target variable (y), which is the Exited.   
+   -Convert binary columns to 0/1 if not already like Gender.   
+   -The categorical features are then processed using OneHotEncoder.      
+   -The data is then split into training and testing sets, with 80% for training and 20% for testing.   
 
-1. **Models Evaluated:**<br>
+ **Models Evaluated:**<br>
   1. Random Forest (class-weighted)<br>
      -Applied class weights to give more importance to the minority class.    
 
@@ -88,9 +86,9 @@ Model Selection & Training
 
      Result: Balanced performance — recall improved to 0.67 and F1-score 0.60, with overall accuracy of 82%.    
 
--**Random Forest + SMOTE + threshold tuning** was chosen as the **best model**
+**Random Forest + SMOTE + threshold tuning** was chosen as the **best model.**
 
-2. **Model Evaluation:**<br>
+ **Model Evaluation:**<br>
 -Measured accuracy using Accuracy, precision, Recall, F1 Score, Confusion Matrix
 
 **Random Forest + SMOTE + threshold tuning**<br>
@@ -107,7 +105,7 @@ It significantly improved recall for the minority class.
 -Actual vs. Predicted Plot → The model is stronger at predicting Class 0 (non-churners).    
     It still struggles with Class 1 (actual churners), which is common when there's class imbalance even after SMOTE.<br>
 
-
+<br>
 ![Residuals Plot](images/residual.png)
 <br>
 -Residuals Plot → Most values are 0, meaning the model predicts correctly most of the time.   
